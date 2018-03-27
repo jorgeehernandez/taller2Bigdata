@@ -1,0 +1,32 @@
+{
+	"graph ": {
+		"nodes": [
+			{
+				"type": "author",
+				"name": "Leonardo",
+				"bornDate": "date"
+			},
+			{
+				"type": "Obra",
+				"name": "Mona Lisa",
+				"createdDate": "date"
+			},
+			{
+				"type": "city",
+				"name": "FLorencia"
+			}
+		],
+		"links": [
+			{
+				"source": "Leonardo",
+				"target": "Mona Lisa",
+				"value": 1
+			},
+			{
+				"source": "Mona Lisa",
+				"target": "Florencia",
+				"value": 1
+			}
+		]
+	}
+}
