@@ -1,0 +1,67 @@
+<div class=container>
+  <div class="form-group">
+
+    <div class="row">
+      <div class="col-lg-6">
+        <label> Busqueda por Artista</label>
+        <div class="input-group">
+          <span class="input-group-addon">
+            <input type="checkbox" aria-label="...">
+          </span>
+          <input type="text" class="form-control" aria-label="...">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <label> Busqueda por Obra</label>
+        <div class="input-group">
+          <span class="input-group-addon">
+           <input type="radio" aria-label="...">
+          </span>
+          <input type="text" class="form-control" aria-label="...">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class='col-sm-6'>
+        <label style="padding-top: 10px"> Busqueda por Fecha</label>
+        <div class="form-group">
+          <div class='input-group date' id='datetimepicker1'>
+            <input type='text' class="form-control"/>
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        $(function () {
+          $('#datetimepicker1').datetimepicker();
+        });
+      </script>
+    </div>
+  </div>
+
+
+  </div>
+  <div class="alert alert-info" ng-if="!showTable">
+    <p>{{message}}</p>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover" ng-if="showTable">
+      <thead>
+      <tr>
+        <th>Sujeto</th>
+        <!-- <th>Predicado</th>
+        <th>Objeto</th> -->
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="result in results">
+        <td ng-click=showModal(result.a.value)>{{result.a.value}}</td>
+        <!-- <td>{{result.b.value}}</td>
+        <td>{{result.c.value}}</td> -->
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
